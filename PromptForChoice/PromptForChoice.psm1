@@ -39,8 +39,8 @@ function Get-Choice {
         [Parameter(ParameterSetName="YesNo")]
         [switch] $YesNo,
 
-        [Parameter(ParameterSetName="YesNoCancle")]
-        [switch] $YesNoCancle, 
+        [Parameter(ParameterSetName="YesNoCancel")]
+        [switch] $YesNoCancel, 
 
         [Parameter()]
         [int] $Default
@@ -48,7 +48,7 @@ function Get-Choice {
 
     switch ($PSCmdlet.ParameterSetName) {
         "YesNo" { $Choices = "&Yes", "&No" }
-        "YesNoCancle" { $Choices = "&Yes", "&No", "&Cancle" }
+        "YesNoCancel" { $Choices = "&Yes", "&No", "&Cancel" }
         Default { }
     }
 
